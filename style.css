@@ -1,0 +1,140 @@
+/*Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%) */
+
+:root {
+    --accent-100: white;
+    --sedan-color: hsl(31, 77%, 52%);
+    --suv-color: hsl(184, 100%, 22%);
+    --luxury-color: hsl(179, 100%, 13%);
+    font-size: 16px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: black;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    right: 0;
+    left: 0;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {
+    color: white;
+    font-size: 0.9375rem;
+    font-family:  "Lexend Deca", sans-serif;
+}
+
+#three-cards {
+    display: grid;
+    width: 70%;
+    height: 60vh;
+    margin-top: 20vh;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: repeat(4, auto);
+}
+
+.card {
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+    padding: 30px;
+}
+
+@media (max-width: 700px) {
+    #three-cards {
+        width: 99%;
+        grid-template-columns: 1fr;
+        margin-top: 5vh;
+         margin-bottom: 5vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    }
+
+    .card {
+        width: min(250px, 100%);
+    }
+
+    h2 {
+        margin: 8px;
+    }
+}
+
+button {
+    width: max(50%, 120px);
+    background-color: white;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    border: 0px;
+    font-weight: 500;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+p {
+    line-height: 1.5;
+    opacity: 75%;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+#sedan {
+    background-color: var(--sedan-color);
+}
+
+#suv {
+    background-color: var(--suv-color);
+}
+
+#luxury {
+    background-color: var(--luxury-color);
+}
+
+#sedan > button {
+    color: var(--sedan-color);
+    border: 2px solid var(--sedan-color);
+}
+
+#suv > button {
+    color: var(--suv-color);
+    border: 2px solid var(--suv-color);
+}
+#luxury > button {
+    color: var(--luxury-color);
+    border: 2px solid var(--luxury-color);
+}
+
+button:hover, button:focus {
+    border: 2px solid white !important;
+    background-color: transparent;
+    color: white;
+    -webkit-text-fill-color: white;  /* I have no idea why this works but color: white; doesn't 🤷‍♀️ */
+}
+
+/*
+#sedan-btn:hover, #sedan-btn:focus {
+    background-color: var(--sedan-color);
+}
+
+#suv-btn:hover, #suv-btn:focus {
+    background-color: var(--suv-color);
+}
+#luxury-btn:hover, #luxury-btn:focus {
+    background-color: var(--luxury-color);
+}
+*/
