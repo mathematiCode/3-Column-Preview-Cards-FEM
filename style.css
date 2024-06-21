@@ -56,8 +56,9 @@ body {
         grid-template-columns: 1fr;
         margin-top: 5vh;
          margin-bottom: 5vh;
-    margin-left: 2vh;
-    margin-right: 2vh;
+    margin-left: 3vh;
+    margin-right: 3vh;
+    place-self: center center;
     }
 
     .card {
@@ -77,7 +78,7 @@ button {
     padding-bottom: 10px;
     border-radius: 20px;
     border: 0px;
-    font-weight: 500;
+    font-weight: 600;
     margin-top: 15px;
     cursor: pointer;
 }
